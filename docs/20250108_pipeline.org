@@ -1,0 +1,186 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_EXTRA_CSS: ./slides.css
+#+REVEAL_THEME: dracula
+#+REVEAL_HLEVEL: 10
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2><h4>%a</h4>
+#+REVEAL_PLUGINS: (highlight notes)
+#+OPTIONS: \n:t
+#+OPTIONS: ^:{}
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+#+TITLE: 俺の冬休み
+#+Author: 🍉ぬ🍉
+
+#+REVEAL_INIT_OPTIONS: slideNumber: 'c/t', transition: 'convex'
+
+* 生成AIと戯れました！
+* Agenda
+- 画像生成AI
+- 動画生成AI
+- 大規模言語モデル (LLM)
+- まとめ
+- おまけ
+* 今回の内容
+- 原理については一切触れません
+- ツールを使ってみました！がメインです
+* 画像生成AI
+- Midjourney
+  Discord上でプロンプト入力
+- Stable Diffusion (オープンソース)
+  ローカル環境 or クラウド環境でプロンプト入力
+* Midjourney (有料)
+https://www.midjourney.com/home
+
+* 使っている様子
+#+BEGIN_EXPORT html
+<img src="images/3rd/midjourney1.png" width="1243" height="210" alt="Sora Image" style="margin: 0;">
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<img src="images/3rd/midjourney2.png" width="1243" height="300" alt="Sora Image" style="margin: 0;">
+#+END_EXPORT
+
+* 画像生成の結果
+#+BEGIN_EXPORT html
+<div style="display: flex; justify-content: space-around;">
+  <img src="images/3rd/child_tyrannosaurus_rex.png" alt="poke_r" style="width: 450px;">
+  <img src="images/3rd/tyrannosaurus_rex.png" alt="poke_g" style="width: 450px;">
+</div>
+#+END_EXPORT
+
+* Stable Diffusion (無料)
+https://ja.stability.ai/stable-diffusion
+
+* 使っている様子
+#+BEGIN_EXPORT html
+<img src="images/3rd/sd.png" width="1200" height="450" alt="Sora Image">
+#+END_EXPORT
+* 画像生成の結果
+#+BEGIN_EXPORT html
+<div style="display: flex; justify-content: space-around;">
+  <img src="images/3rd/girl1.png" alt="poke_r" style="width:450px; height:520px">
+  <img src="images/3rd/girl2.png" alt="poke_r" style="width:450px; height:520px">
+</div>
+#+END_EXPORT
+* 所感
+- Midjourney
+  - 簡単に高品質な画像を出力できる
+  - ポリシー違反で生成に失敗することがある
+- Stable Diffusion
+  - 構築がめんどくさいがカスタマイズ性がある
+  - どんな画像でも生成できる
+* 動画生成AI
+- Runway (Gen-2)
+- Sora (OpenAI)
+- Dream Machine (Luma AI)
+* Runway (無料)
+https://runwayml.com/
+#+BEGIN_EXPORT html
+<video width="640" height="360" controls>
+  <source src="images/3rd/runway.mp4" type="video/mp4">
+</video>
+#+END_EXPORT
+
+* Sora (有料)
+https://sora.com/
+#+BEGIN_EXPORT html
+<video width="640" height="360" controls>
+  <source src="images/3rd/sora.mp4" type="video/mp4">
+</video>
+#+END_EXPORT
+
+* Dream Machine (無料)
+https://lumalabs.ai/dream-machine/creations
+#+BEGIN_EXPORT html
+<video width="640" height="360" controls>
+  <source src="images/3rd/dream_machine.mp4" type="video/mp4">
+</video>
+#+END_EXPORT
+* 所感
+- Runway
+  - よく分かってない
+- Sora
+  - ChatGPT Plusの加入者は使ってみてね
+- Dream Machine
+  - 2枚の画像から動画生成はこれくらい
+* 大規模言語モデル(LLM)
+https://chatgpt.com/
+
+* 爆弾の作り方を教えて
+#+BEGIN_EXPORT html
+<img src="images/3rd/chatgpt.png" width="640" height="279" alt="Sora Image">
+#+END_EXPORT
+* 知りたくね？
+* 無検閲(uncensored) LLM
+#+BEGIN_EXPORT html
+<img src="images/3rd/uncensored_llm.png" width="640" height="279" alt="Sora Image">
+#+END_EXPORT
+
+* これしかねえ！
+* LLMの選定
+#+BEGIN_EXPORT html
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1hk0ldo/">December 2024 Uncensored LLM Test Results</a>
+#+END_EXPORT
+#+ATTR_REVEAL: :style "word-wrap: break-word; overflow-wrap: break-word;"
+Qwen2.5-Code-32B-Instruct-abliteratedが
+いいらしい？
+* 実行環境
+Google Colab
+A100 GPU 40GB
+#+BEGIN_EXPORT html
+<img src="images/3rd/llm.png" width="640" height="279" alt="Sora Image">
+#+END_EXPORT
+* 質問の結果
+#+BEGIN_EXPORT html
+<img src="images/3rd/bomb.png" width="1280" height="500" alt="Sora Image">
+#+END_EXPORT
+* 所感
+- 日本語の情報が少ない
+- 構築がめんどくさかった
+- GPU不足なのかレスポンスが非常に遅い
+* まとめ
+- 流行ってる生成AI系ツールを触ってみた
+- 無検閲LLMのレスが早かったら一般公開してみたかった
+- Stable Diffusionにハマっています
+- pipelineで一緒に作業してくれる方募集中！
+* おまけ
+#+BEGIN_EXPORT html
+<video width="1280" height="500" controls>
+  <source src="images/3rd/pipeline.mp4" type="video/mp4">
+</video>
+#+END_EXPORT
+* おまけ2
+#+BEGIN_SRC python
+  from langchain_openai import ChatOpenAI
+  from browser_use import Agent
+  import asyncio
+  import os
+  from dotenv import load_dotenv
+
+  load_dotenv()
+
+  api_key = os.getenv("OPENAI_API_KEY")
+  if api_key:
+      print(f"API Key loaded: {api_key}")
+  else:
+      print("Failed to load API Key")
+
+  async def main():
+      agent = Agent(
+          task="""
+          下記タスクを実行してください
+          - yoorというキーワードで検索をかけてyoorのページにアクセスしてください
+          - 「サロンを検索」というところでpipelineと検索してください
+          - 検索結果が表示されるまで待ってください
+          - 出てきた検索結果のオンラインサロンをクリックしてください
+          - 「このオンラインサロンに参加する」を押してください
+          - 年中無休の作業通話ルームの中の「このプランに参加する」を押してください
+          """,
+          llm=ChatOpenAI(model="gpt-4o-mini"),
+      )
+      result = await agent.run()
+      print(result)
+
+  asyncio.run(main())
+#+END_SRC
+

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>俺の冬休み</title>
+<meta name="author" content="🍉ぬ🍉"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="../reveal.js/dist/theme/dracula.css" id="theme"/>
+
+<link rel="stylesheet" href="./slides.css"/>
+<link rel="stylesheet" href="../reveal.js/plugin/highlight/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>俺の冬休み</h2><h4>🍉ぬ🍉</h4>
+</section>
+
+<section>
+<section id="slide-org9f50da5">
+<h2 id="org9f50da5">生成AIと戯れました！</h2>
+</section>
+</section>
+<section>
+<section id="slide-org29f7dcd">
+<h2 id="org29f7dcd">Agenda</h2>
+<ul>
+<li>画像生成AI<br /></li>
+<li>動画生成AI<br /></li>
+<li>大規模言語モデル (LLM)<br /></li>
+<li>まとめ<br /></li>
+<li>おまけ<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org42a70ef">
+<h2 id="org42a70ef">今回の内容</h2>
+<ul>
+<li>原理については一切触れません<br /></li>
+<li>ツールを使ってみました！がメインです<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2872db1">
+<h2 id="org2872db1">画像生成AI</h2>
+<ul>
+<li>Midjourney<br />
+Discord上でプロンプト入力<br /></li>
+<li>Stable Diffusion (オープンソース)<br />
+ローカル環境 or クラウド環境でプロンプト入力<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org6de3073">
+<h2 id="org6de3073">Midjourney (有料)</h2>
+<p>
+<a href="https://www.midjourney.com/home">https://www.midjourney.com/home</a><br />
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3ae90df">
+<h2 id="org3ae90df">使っている様子</h2>
+<img src="images/3rd/midjourney1.png" width="1243" height="210" alt="Sora Image" style="margin: 0;">
+
+<img src="images/3rd/midjourney2.png" width="1243" height="300" alt="Sora Image" style="margin: 0;">
+
+</section>
+</section>
+<section>
+<section id="slide-orga1affa3">
+<h2 id="orga1affa3">画像生成の結果</h2>
+<div style="display: flex; justify-content: space-around;">
+  <img src="images/3rd/child_tyrannosaurus_rex.png" alt="poke_r" style="width: 450px;">
+  <img src="images/3rd/tyrannosaurus_rex.png" alt="poke_g" style="width: 450px;">
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org33798ed">
+<h2 id="org33798ed">Stable Diffusion (無料)</h2>
+<p>
+<a href="https://ja.stability.ai/stable-diffusion">https://ja.stability.ai/stable-diffusion</a><br />
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org64303a4">
+<h2 id="org64303a4">使っている様子</h2>
+<img src="images/3rd/sd.png" width="1200" height="450" alt="Sora Image">
+</section>
+</section>
+<section>
+<section id="slide-orgcc14470">
+<h2 id="orgcc14470">画像生成の結果</h2>
+<div style="display: flex; justify-content: space-around;">
+  <img src="images/3rd/girl1.png" alt="poke_r" style="width:450px; height:520px">
+  <img src="images/3rd/girl2.png" alt="poke_r" style="width:450px; height:520px">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org5dccafd">
+<h2 id="org5dccafd">所感</h2>
+<ul>
+<li>Midjourney<br />
+<ul>
+<li>簡単に高品質な画像を出力できる<br /></li>
+<li>ポリシー違反で生成に失敗することがある<br /></li>
+
+</ul></li>
+<li>Stable Diffusion<br />
+<ul>
+<li>構築がめんどくさいがカスタマイズ性がある<br /></li>
+<li>どんな画像でも生成できる<br /></li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb525d03">
+<h2 id="orgb525d03">動画生成AI</h2>
+<ul>
+<li>Runway (Gen-2)<br /></li>
+<li>Sora (OpenAI)<br /></li>
+<li>Dream Machine (Luma AI)<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1a66dea">
+<h2 id="org1a66dea">Runway (無料)</h2>
+<p>
+<a href="https://runwayml.com/">https://runwayml.com/</a><br />
+</p>
+<video width="640" height="360" controls>
+  <source src="images/3rd/runway.mp4" type="video/mp4">
+</video>
+
+</section>
+</section>
+<section>
+<section id="slide-orga030a45">
+<h2 id="orga030a45">Sora (有料)</h2>
+<p>
+<a href="https://sora.com/">https://sora.com/</a><br />
+</p>
+<video width="640" height="360" controls>
+  <source src="images/3rd/sora.mp4" type="video/mp4">
+</video>
+
+</section>
+</section>
+<section>
+<section id="slide-org584b26c">
+<h2 id="org584b26c">Dream Machine (無料)</h2>
+<p>
+<a href="https://lumalabs.ai/dream-machine/creations">https://lumalabs.ai/dream-machine/creations</a><br />
+</p>
+<video width="640" height="360" controls>
+  <source src="images/3rd/dream_machine.mp4" type="video/mp4">
+</video>
+</section>
+</section>
+<section>
+<section id="slide-org0d96bbb">
+<h2 id="org0d96bbb">所感</h2>
+<ul>
+<li>Runway<br />
+<ul>
+<li>よく分かってない<br /></li>
+
+</ul></li>
+<li>Sora<br />
+<ul>
+<li>ChatGPT Plusの加入者は使ってみてね<br /></li>
+
+</ul></li>
+<li>Dream Machine<br />
+<ul>
+<li>2枚の画像から動画生成はこれくらい<br /></li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgd29c907">
+<h2 id="orgd29c907">大規模言語モデル(LLM)</h2>
+<p>
+<a href="https://chatgpt.com/">https://chatgpt.com/</a><br />
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf01167a">
+<h2 id="orgf01167a">爆弾の作り方を教えて</h2>
+<img src="images/3rd/chatgpt.png" width="640" height="279" alt="Sora Image">
+</section>
+</section>
+<section>
+<section id="slide-org33cc240">
+<h2 id="org33cc240">知りたくね？</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgc5c3a11">
+<h2 id="orgc5c3a11">無検閲(uncensored) LLM</h2>
+<img src="images/3rd/uncensored_llm.png" width="640" height="279" alt="Sora Image">
+
+</section>
+</section>
+<section>
+<section id="slide-org1cf5dd6">
+<h2 id="org1cf5dd6">これしかねえ！</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgf5cfb14">
+<h2 id="orgf5cfb14">LLMの選定</h2>
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1hk0ldo/">December 2024 Uncensored LLM Test Results</a>
+<p>
+Qwen2.5-Code-32B-Instruct-abliteratedが<br />
+いいらしい？<br />
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgf6f15ed">
+<h2 id="orgf6f15ed">実行環境</h2>
+<p>
+Google Colab<br />
+A100 GPU 40GB<br />
+</p>
+<img src="images/3rd/llm.png" width="640" height="279" alt="Sora Image">
+</section>
+</section>
+<section>
+<section id="slide-org9536b22">
+<h2 id="org9536b22">質問の結果</h2>
+<img src="images/3rd/bomb.png" width="1280" height="500" alt="Sora Image">
+</section>
+</section>
+<section>
+<section id="slide-org5d00b84">
+<h2 id="org5d00b84">所感</h2>
+<ul>
+<li>日本語の情報が少ない<br /></li>
+<li>構築がめんどくさかった<br /></li>
+<li>GPU不足なのかレスポンスが非常に遅い<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org0b9867c">
+<h2 id="org0b9867c">まとめ</h2>
+<ul>
+<li>流行ってる生成AI系ツールを触ってみた<br /></li>
+<li>無検閲LLMのレスが早かったら一般公開してみたかった<br /></li>
+<li>Stable Diffusionにハマっています<br /></li>
+<li>pipelineで一緒に作業してくれる方募集中！<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2469b56">
+<h2 id="org2469b56">おまけ</h2>
+<video width="1280" height="500" controls>
+  <source src="images/3rd/pipeline.mp4" type="video/mp4">
+</video>
+</section>
+</section>
+<section>
+<section id="slide-org627d565">
+<h2 id="org627d565">おまけ2</h2>
+<div class="org-src-container">
+
+<pre   ><code class="python" >  from langchain_openai import ChatOpenAI
+  from browser_use import Agent
+  import asyncio
+  import os
+  from dotenv import load_dotenv
+
+  load_dotenv()
+
+  api_key = os.getenv("OPENAI_API_KEY")
+  if api_key:
+      print(f"API Key loaded: {api_key}")
+  else:
+      print("Failed to load API Key")
+
+  async def main():
+      agent = Agent(
+          task="""
+          下記タスクを実行してください
+          - yoorというキーワードで検索をかけてyoorのページにアクセスしてください
+          - 「サロンを検索」というところでpipelineと検索してください
+          - 検索結果が表示されるまで待ってください
+          - 出てきた検索結果のオンラインサロンをクリックしてください
+          - 「このオンラインサロンに参加する」を押してください
+          - 年中無休の作業通話ルームの中の「このプランに参加する」を押してください
+          """,
+          llm=ChatOpenAI(model="gpt-4o-mini"),
+      )
+      result = await agent.run()
+      print(result)
+
+  asyncio.run(main())
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="../reveal.js/dist/reveal.js"></script>
+<script src="../reveal.js/plugin/highlight/highlight.js"></script>
+<script src="../reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealHighlight, RevealNotes],
+slideNumber: 'c/t', transition: 'convex'
+});
+
+</script>
+</body>
+</html>
